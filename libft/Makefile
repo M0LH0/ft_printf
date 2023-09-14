@@ -6,24 +6,25 @@
 #    By: lsilva-p <lsilva-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/24 08:55:12 by lsilva-p          #+#    #+#              #
-#    Updated: 2023/09/14 17:35:37 by lsilva-p         ###   ########.fr        #
+#    Updated: 2023/09/14 17:40:30 by lsilva-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 
-# Path Definition
+#	--		PATH DEFINITION			--
 SOURCES_PATH = ./src/
 HEADER_PATH = ./includes/
 BIN_PATH = ./bin/
 
-# Colors Definition 
+#	--		COLOR DEFINITION		--
 GREEN = "\033[32m"
 RED = "\033[31m"
 CYAN = "\033[36m"
 COLOR_LIMITER = "\033[0m"
 
+#	--		SOURCES DEFINITION		--
 SOURCES = \
 	ft_atoi.c \
 	ft_bzero.c \
@@ -71,6 +72,7 @@ BONUS_SOURCES = \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
 
+#	--		OBJECTS DEFINITION		--	
 MANDATORY_OBJECTS = $(addprefix $(BIN_PATH), $(SOURCES:%.c=%.o))
 BONUS_OBJECTS = $(addprefix $(BIN_PATH), $(BONUS_SOURCES:%.c=%.o))
 
